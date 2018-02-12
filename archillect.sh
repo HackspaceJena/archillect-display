@@ -20,7 +20,7 @@ cd archillect-resources
     )
 wget --output-document='archillect-home.html' archillect.com
 #get the picture number of the most recent post by searching for the first six-digit number, and download that image detail site
-wget --output-document='archillect-imagedetail.html' archillect.com/`ack -1 -o '\d{6}' archillect-home.html`
+wget --output-document='archillect-imagedetail.html' archillect.com/`grep -o -P '\d{6}' archillect-home.html | cut -f 1 -d$'\n'`
 #grep the image embedded, and download the image. Also write the archillect-image-ID to a file.
 wget --output-document='archillect-currentimage' `grep 'id="ii"' archillect-imagedetail.html | grep -o -P 'http.*\.(jpg|png|gif)\ '`
 #show the new image and kill the previous instance of the image viewer
