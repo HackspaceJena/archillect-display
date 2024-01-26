@@ -1,3 +1,10 @@
+# ⚠️ Archived repository
+
+This repository was moved to / Dieses Repository befindet sich nun unter:
+
+🔗 https://git.kraut.space/Krautspace/archillect-display
+
+
 # archillect-display
 A screen we set up as art in our Hackerspace that displays a new image from <http://archillect.com> every 10 minutes.
 
